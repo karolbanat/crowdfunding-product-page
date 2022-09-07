@@ -1,0 +1,9 @@
+@use '../base/variables';
+
+@each $color, $shades in variables.$colors {
+	@each $shade, $value in $shades {
+		.bg-#{$color}-#{$shade} {
+			background-color: $value;
+		}
+	}
+}

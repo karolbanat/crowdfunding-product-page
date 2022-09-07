@@ -2,21 +2,22 @@
 @use './mixins';
 
 :root {
-	// colors
+	/* colors */
 	@each $color, $shades in variables.$colors {
 		@each $shade, $value in $shades {
 			--clr-#{$color}-#{$shade}: #{$value};
 		}
 	}
 
-	// font families
+	/* font families */
+	--ff-primary: 'Commissioner', sans-serif;
 
-	// font wieghts
+	/* font weights */
 	@each $font-weight, $value in variables.$font-weights {
 		--fw-#{$font-weight}: #{$value};
 	}
 
-	// font sizes
+	/* font sizes */
 	@each $screen, $sizes in variables.$font-sizes {
 		@if $screen == small {
 			@each $size, $value in $sizes {
@@ -31,12 +32,26 @@
 		}
 	}
 
-	// border radius
+	// -- font sizes exceptions
+	--fz-pledge-heading: 1.4rem;
+	--fz-about-heading: 1.8rem;
+	--fz-stock-text: 1.5rem;
+	--fz-modal-stock-number: 1.8rem;
+	--fz-nav-link: 1.8rem;
+	--fz-header-button: 1.6rem;
+
+	@include mixins.mq(medium) {
+		--fz-pledge-heading: 1.8rem;
+		--fz-about-heading: 2rem;
+		--fz-nav-link: 1.3rem;
+	}
+
+	/* border radius */
 	@each $radius, $value in variables.$border-radius {
 		--borr-#{$radius}: #{$value};
 	}
 
-	// spacings
+	/* spacings */
 	@each $unit, $sizes in variables.$spacings {
 		@each $size, $value in $sizes {
 			--spacing-#{$unit}-#{$size}: #{$value};
