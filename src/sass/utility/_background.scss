@@ -1,9 +1,34 @@
 @use '../base/variables';
+@use '../base/mixins' as mxn;
 
 @each $color, $shades in variables.$colors {
 	@each $shade, $value in $shades {
 		.bg-#{$color}-#{$shade} {
 			background-color: $value;
 		}
+	}
+}
+
+.bg-image {
+	--bg-image: url('../images/image-hero-mobile.jpg');
+	--bg-height: 30rem;
+	position: relative;
+	@include mxn.mq(medium) {
+		--bg-image: url('../images/image-hero-desktop.jpg');
+		--bg-height: 40rem;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: var(--bg-height);
+		background-image: var(--bg-image);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -10;
 	}
 }

@@ -1,0 +1,27 @@
+.toggle-button {
+	--size: 4rem;
+	display: inline-grid;
+	place-items: center;
+	width: var(--size);
+	aspect-ratio: 1;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	&__icon-close {
+		display: none;
+	}
+
+	&[aria-expanded='true'] &__icon-open {
+		display: none;
+	}
+
+	&[aria-expanded='true'] &__icon-close {
+		display: block;
+	}
+
+	&:hover,
+	&:focus {
+		outline: 2px solid var(--clr-primary-400);
+	}
+}
