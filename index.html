@@ -47,9 +47,12 @@
         <div class="button-group">
           <button data-reward="no-reward" class="button button--primary">Back this project</button>
           <button aria-describedby="bookmark-label" class="bookmark-button">
-            <img src="./dist/images/icon-bookmark.svg"
-                 alt=""
-                 class="bookmark-button__icon">
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg" class="bookmark-button__icon">
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="var(--icon-fill, #2F2F2F)" cx="28" cy="28" r="28" />
+                <path fill="#E7E7E7" d="M23 19v18l5-5.058L33 37V19z" />
+              </g>
+            </svg>
             <span data-hidden="small" id="bookmark-label">Bookmark</span></button>
         </div>
       </div>

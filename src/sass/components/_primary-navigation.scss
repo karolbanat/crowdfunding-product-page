@@ -2,7 +2,9 @@
 @use '../base/functions' as func;
 
 .primary-navigation {
-	--padding-block: clamp(3.2rem, 5vw, 4.8rem);
+	--padding-min: var(--spacing-rem-500);
+	--padding-max: var(--spacing-rem-700);
+	--padding-block: clamp(var(--padding-min), 5vw, var(--padding-max));
 	--margin-bottom: 19.2rem;
 	position: relative;
 	display: flex;
@@ -33,7 +35,7 @@
 		@include mxn.max-mq(medium) {
 			li {
 				$border-clr: func.get-color(neutral, 800);
-				padding: 2.4rem;
+				padding: var(--spacing-rem-400);
 
 				&:not(:last-of-type) {
 					border-bottom: 1px solid fade-out($border-clr, 0.9);
@@ -43,7 +45,7 @@
 		@include mxn.mq(medium) {
 			display: flex;
 			align-items: center;
-			gap: 3.2rem;
+			gap: var(--spacing-rem-500);
 		}
 	}
 

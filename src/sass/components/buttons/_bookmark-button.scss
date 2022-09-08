@@ -1,0 +1,45 @@
+@use '../../base/mixins' as mxn;
+@use '../../base/functions' as func;
+
+.bookmark-button {
+	$bg-color: func.get-color(neutral, 800);
+	--clr-text: var(--clr-neutral-500);
+	display: inline-flex;
+	align-items: center;
+	gap: var(--spacing-rem-300);
+	font-size: var(--fz-400);
+	font-weight: var(--fw-700);
+	line-height: 1;
+	color: var(--clr-text);
+	background-color: fade-out($bg-color, 0.95);
+	border: none;
+	border-radius: var(--borr-900);
+	cursor: pointer;
+	@include mxn.mq(medium) {
+		padding-right: var(--spacing-rem-400);
+	}
+
+	& span[data-hidden='small'] {
+		display: none;
+		@include mxn.mq(medium) {
+			display: inline-block;
+		}
+	}
+
+	&:hover,
+	&:focus-visible {
+		--icon-fill: var(--clr-neutral-600);
+	}
+
+	&.bookmarked {
+		$bg-color: func.get-color(primary, 700);
+		--clr-text: var(--clr-primary-700);
+		--icon-fill: var(--clr-primary-700);
+		background-color: fade-out($bg-color, 0.95);
+
+		&:hover,
+		&:focus-visible {
+			--icon-fill: var(--clr-primary-400);
+		}
+	}
+}
