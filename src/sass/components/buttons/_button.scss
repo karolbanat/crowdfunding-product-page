@@ -1,0 +1,22 @@
+.button {
+	padding: 1.25em 2.25em;
+	font-size: var(--fz-300);
+	font-weight: var(--fw-700);
+	line-height: 1;
+	color: var(--button-text, black);
+	background-color: var(--button-bg, #eaeaea);
+	border: none;
+	border-radius: var(--borr-900);
+	cursor: pointer;
+	transition: background-color 0.35s ease;
+
+	&--primary {
+		--button-text: var(--clr-neutral-100);
+		--button-bg: var(--clr-primary-700);
+
+		&:hover,
+		&:focus-visible {
+			--button-bg: var(--clr-primary-400);
+		}
+	}
+}

@@ -5,6 +5,7 @@
 @use './layout/container';
 @use './layout/flow';
 
+@use './components/buttons/button';
 @use './components/buttons/toggle-button';
 @use './components/buttons/bookmark-button';
 @use './components/primary-navigation';

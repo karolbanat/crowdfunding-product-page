@@ -6,12 +6,11 @@
 	--padding-max: var(--spacing-rem-700);
 	--padding-block: clamp(var(--padding-min), 5vw, var(--padding-max));
 	--margin-bottom: 19.2rem;
+	@include mxn.flex-between;
 	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	padding-block: var(--padding-block);
 	margin-bottom: var(--margin-bottom);
+	z-index: 999;
 
 	&__nav {
 		@include mxn.max-mq(medium) {

@@ -21,4 +21,13 @@
 		margin-bottom: var(--spacing-rem-300);
 		font-size: var(--fz-600);
 	}
+
+	&__button {
+		font-size: var(--fz-header-button);
+	}
+
+	&__button-group {
+		@include mxn.flex-between;
+		margin-top: clamp(var(--spacing-rem-400), 4vw, 4rem);
+	}
 }
