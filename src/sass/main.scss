@@ -8,11 +8,15 @@
 @use './components/buttons/button';
 @use './components/buttons/toggle-button';
 @use './components/buttons/bookmark-button';
+@use './components/lists/progress-list';
+@use './components/lists/pledge-list';
 @use './components/primary-navigation';
 @use './components/primary-header';
 @use './components/progress';
-@use './components/progress-list';
+@use './components/about';
+@use './components/pledge-card';
 
 @use './utility/background';
 @use './utility/text';
+@use './utility/section-heading';
 @use './utility/visually-hidden';

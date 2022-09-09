@@ -12,11 +12,17 @@
 
 	&--primary {
 		--button-text: var(--clr-neutral-100);
-		--button-bg: var(--clr-primary-700);
+		--button-bg: var(--clr-primary-400);
 
 		&:hover,
 		&:focus-visible {
-			--button-bg: var(--clr-primary-400);
+			--button-bg: var(--clr-primary-700);
 		}
+	}
+
+	&:disabled {
+		--button-text: var(--clr-neutral-100);
+		--button-bg: var(--clr-neutral-800);
+		cursor: not-allowed;
 	}
 }

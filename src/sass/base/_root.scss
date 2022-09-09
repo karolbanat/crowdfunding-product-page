@@ -33,17 +33,17 @@
 	}
 
 	// -- font sizes exceptions
-	--fz-pledge-heading: 1.4rem;
-	--fz-about-heading: 1.8rem;
-	--fz-stock-text: 1.5rem;
-	--fz-modal-stock-number: 1.8rem;
 	--fz-nav-link: 1.8rem;
 	--fz-header-button: 1.6rem;
+	--fz-section-heading: 1.8rem;
+	--fz-pledge-heading: 1.4rem;
+	--fz-stock-text: 1.5rem;
+	--fz-modal-stock-number: 1.8rem;
 
 	@include mixins.mq(medium) {
-		--fz-pledge-heading: 1.8rem;
-		--fz-about-heading: 2rem;
 		--fz-nav-link: 1.3rem;
+		--fz-section-heading: 2rem;
+		--fz-pledge-heading: 1.8rem;
 	}
 
 	/* border radius */
