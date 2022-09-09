@@ -48,7 +48,10 @@ $border-radius: (
 );
 
 $spacings: (
-	em: (),
+	em: (
+		400: 1.25em,
+		700: 2.25em,
+	),
 	rem: (
 		300: 1.6rem,
 		400: 2.4rem,

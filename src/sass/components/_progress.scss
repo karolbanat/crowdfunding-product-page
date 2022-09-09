@@ -1,0 +1,44 @@
+@use '../base/mixins' as mxn;
+@use '../base/functions' as func;
+
+.progress {
+	@include mxn.white-container;
+	text-align: center;
+	@include mxn.mq(medium) {
+		text-align: initial;
+	}
+
+	&__stat {
+		margin-bottom: 1rem;
+		font-size: var(--fz-700);
+		font-weight: var(--fw-700);
+		color: var(--clr-neutral-900);
+	}
+
+	&__label {
+		font-size: var(--fz-350);
+	}
+
+	&__progress-bar {
+		$bg-color: func.get-color(neutral, 800);
+		--height: 1.2rem;
+		--progress: 80%;
+		position: relative;
+		margin-top: var(--spacing-em-700);
+		height: var(--height);
+		border-radius: var(--borr-900);
+		background-color: fade-out($bg-color, 0.95);
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: var(--progress);
+			border-radius: inherit;
+			background-color: var(--clr-primary-400);
+		}
+	}
+}

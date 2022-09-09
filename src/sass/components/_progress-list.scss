@@ -1,0 +1,45 @@
+@use '../base/mixins' as mxn;
+@use '../base/functions' as func;
+
+.progress-list {
+	--gap: 4.8rem;
+	display: grid;
+	gap: var(--gap);
+	line-height: 1;
+	@include mxn.mq(medium) {
+		--gap: 9.6rem;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+
+		&:not(:first-of-type) {
+			position: relative;
+
+			&::after {
+				$line-clr: func.get-color(neutral, 900);
+				--width: 8rem;
+				--height: 6.3rem;
+				--offset: calc(var(--gap) / 2 * -1);
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: var(--offset);
+				transform: translateX(-50%);
+				height: 1px;
+				width: var(--width);
+				background-color: fade-out($line-clr, 0.85);
+				@include mxn.mq(medium) {
+					left: var(--offset);
+					top: 50%;
+					transform: translateY(-50%);
+					width: 1px;
+					height: var(--height);
+				}
+			}
+		}
+	}
+}
