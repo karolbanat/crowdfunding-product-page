@@ -175,14 +175,17 @@
       <!-- no reward pledge card -->
       <li>
         <article class="modal-pledge-card">
+          <h3 class="visually-hidden">Pledge with no reward</h3>
           <div class="modal-pledge-card__body">
-            <button aria-labelledby="no-reward-heading"
-                    aria-checked="false"
-                    role="radio"
-                    class="radio-button"></button>
-            <header class="modal-pledge-card__header">
-              <h3 id="no-reward-heading" class="modal-pledge-card__heading">Pledge with no reward</h3>
-            </header>
+            <div class="custom-radio-button">
+              <input type="radio"
+                     name="reward"
+                     id="no-reward-selection">
+              <span class="custom-radio-button__button"></span>
+              <label for="no-reward-selection" class="custom-radio-button__label">
+                <span class="modal-pledge-card__heading">Pledge with no reward</span>
+              </label>
+            </div>
             <p class="modal-pledge-card__desc">Choose to support us without a reward if you simply believe in our
               project. As a backer, you will be signed up to receive product updates via email.</p>
           </div>
@@ -201,15 +204,18 @@
       <!-- bamboo stand reward pledge card -->
       <li>
         <article class="modal-pledge-card">
+          <h3 class="visually-hidden">Bamboo Stand</h3>
           <div class="modal-pledge-card__body">
-            <button aria-labelledby="bamboo-stand-heading"
-                    aria-checked="false"
-                    role="radio"
-                    class="radio-button"></button>
-            <header class="modal-pledge-card__header">
-              <h3 id="bamboo-stand-heading" class="modal-pledge-card__heading">Bamboo Stand</h3>
-              <p class="modal-pledge-card__contribution-info">Pledge $25 or more</p>
-            </header>
+            <div class="custom-radio-button">
+              <input type="radio"
+                     name="reward"
+                     id="bamboo-stand-selection">
+              <span class="custom-radio-button__button"></span>
+              <label for="bamboo-stand-selection" class="custom-radio-button__label">
+                <span class="modal-pledge-card__heading">Bamboo Stand</span>
+                <span class="modal-pledge-card__contribution-info">Pledge $25 or more</span>
+              </label>
+            </div>
             <p class="modal-pledge-card__desc">You get an ergonomic stand made of natural bamboo. You've helped us
               launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
             <p class="modal-pledge-card__stock-info"><span>101</span> left</p>
@@ -230,15 +236,18 @@
       <!-- black edition stand pledge card -->
       <li>
         <article class="modal-pledge-card">
+          <h3 class="visually-hidden">Black Edition Stand</h3>
           <div class="modal-pledge-card__body">
-            <button aria-labelledby="black-edition-heading"
-                    aria-checked="false"
-                    role="radio"
-                    class="radio-button"></button>
-            <header class="modal-pledge-card__header">
-              <h3 id="black-edition-heading" class="modal-pledge-card__heading">Black Edition Stand</h3>
-              <p class="modal-pledge-card__contribution-info">Pledge $75 or more</p>
-            </header>
+            <div class="custom-radio-button">
+              <input type="radio"
+                     name="reward"
+                     id="black-edition-selection">
+              <span class="custom-radio-button__button"></span>
+              <label for="black-edition-selection" class="custom-radio-button__label">
+                <span class="modal-pledge-card__heading">Black Edition Stand</span>
+                <span class="modal-pledge-card__contribution-info">Pledge $75 or more</span>
+              </label>
+            </div>
             <p class="modal-pledge-card__desc">You get a Black Special Edition computer stand and a personal thank you.
               You’ll be added to our Backer member list. Shipping is included.</p>
             <p class="modal-pledge-card__stock-info"><span>64</span> left</p>
@@ -260,15 +269,17 @@
       <li>
         <article class="modal-pledge-card" data-out-of-stock="true">
           <div class="modal-pledge-card__body">
-            <button aria-labelledby="mohagany-special-heading"
-                    aria-checked="false"
-                    role="radio"
-                    class="radio-button"
-                    disabled></button>
-            <header class="modal-pledge-card__header">
-              <h3 id="mohagany-special-heading" class="modal-pledge-card__heading">Mahogany Special Edition</h3>
-              <p class="modal-pledge-card__contribution-info">Pledge $200 or more</p>
-            </header>
+            <div class="custom-radio-button">
+              <input type="radio"
+                     name="reward"
+                     disabled
+                     id="mohagany-special-selection">
+              <span class="custom-radio-button__button"></span>
+              <label for="mohagany-special-selection" class="custom-radio-button__label">
+                <span class="modal-pledge-card__heading">Mahogany Special Edition</span>
+                <span class="modal-pledge-card__contribution-info">Pledge $200 or more</span>
+              </label>
+            </div>
             <p class="modal-pledge-card__desc">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
               personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
             <p class="modal-pledge-card__stock-info"><span>0</span> left</p>

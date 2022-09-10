@@ -3,4 +3,16 @@
 
 .modal-pledge-card {
 	@extend .pledge-card;
+
+	&__heading {
+		font-size: var(--fz-400);
+		font-weight: var(--fw-700);
+		color: var(--clr-neutral-900);
+	}
+
+	&__contribution-info {
+		font-size: var(--fz-400);
+		font-weight: var(--fw-500);
+		color: var(--clr-primary-400);
+	}
 }
