@@ -10,13 +10,16 @@
 @use './components/buttons/bookmark-button';
 @use './components/lists/progress-list';
 @use './components/lists/pledge-list';
+@use './components/cards/pledge-card';
+@use './components/cards/modal-pledge-card';
+@use './components/modals/selection-modal';
 @use './components/primary-navigation';
 @use './components/primary-header';
 @use './components/progress';
 @use './components/about';
-@use './components/pledge-card';
 
 @use './utility/background';
 @use './utility/text';
 @use './utility/section-heading';
+@use './utility/modal-heading';
 @use './utility/visually-hidden';

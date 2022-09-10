@@ -1,5 +1,5 @@
-@use '../base/mixins' as mxn;
-@use '../base/functions' as func;
+@use '../../base/mixins' as mxn;
+@use '../../base/functions' as func;
 
 .pledge-card {
 	$border-clr: func.get-color(neutral, 900);

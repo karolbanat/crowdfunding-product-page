@@ -1,0 +1,6 @@
+@use '../../base/mixins' as mxn;
+@use './pledge-card';
+
+.modal-pledge-card {
+	@extend .pledge-card;
+}
