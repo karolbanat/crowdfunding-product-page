@@ -1,0 +1,51 @@
+@use '../base/mixins' as mxn;
+
+.pledge-form {
+	display: grid;
+	gap: var(--spacing-rem-300);
+	grid-template-areas:
+		'label label'
+		'input submit';
+	grid-template-columns: 1fr 1fr;
+	@include mxn.mq(medium) {
+		grid-template-areas: 'label input submit';
+	}
+
+	&__label {
+		grid-area: label;
+		place-self: center;
+		font-size: var(--fz-350);
+		@include mxn.mq(medium) {
+			justify-self: start;
+		}
+	}
+
+	& input[type='number'] {
+		--border-clr: var(--clr-neutral-500);
+		--max-width: 10rem;
+		grid-area: input;
+		justify-self: end;
+		max-width: var(--max-width);
+		padding-block: var(--spacing-em-400);
+		padding-left: var(--spacing-em-700);
+		padding-right: var(--spacing-em-200);
+		font-size: var(--fz-300);
+		font-weight: var(--fw-700);
+		line-height: 1;
+		border: 1px solid var(--border-clr);
+		border-radius: var(--borr-900);
+		caret-color: var(--clr-primary-400);
+		cursor: pointer;
+
+		&:not(:disabled):is(:hover, :focus) {
+			--border-clr: var(--clr-primary-400);
+			outline: 1px solid var(--border-clr);
+		}
+	}
+
+	& button[type='submit'] {
+		grid-area: submit;
+		justify-self: start;
+		padding-inline: var(--spacing-rem-400);
+	}
+}
