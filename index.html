@@ -162,7 +162,7 @@
        aria-labelledby="selection-modal-heading"
        role="dialog"
        id="selection-modal"
-       class="selection-modal">
+       class="selection-modal | flow">
     <button aria-label="Close modal" class="selection-modal__close-button">
       <img src="./dist/images/icon-close-modal.svg" alt="">
     </button>
@@ -320,12 +320,17 @@
   <!-- Selection modal end -->
 
   <!-- Success modal start -->
-
-  <!-- Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it! -->
-
+  <div aria-modal="true"
+       aria-labelledby="success-modal-heading"
+       role="dialog"
+       id="success-modal"
+       class="success-modal | flow">
+    <img src="./dist/images/icon-check.svg" alt="">
+    <h2 id="success-modal-heading" class="modal-heading success-modal__heading">Thanks for your support!</h2>
+    <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
+      email once our campaign is completed.</p>
+    <button class="button button--primary success-modal__confirmation-button">Got it!</button>
+  </div>
   <!-- Success modal end -->
 
   <script src="./dist/js/main.min.js" defer></script>

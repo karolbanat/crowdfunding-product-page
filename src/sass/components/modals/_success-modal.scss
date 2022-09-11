@@ -1,0 +1,32 @@
+@use '../../base/mixins' as mxn;
+
+.success-modal {
+	--top: 15rem;
+	--max-width: 54rem;
+	--margin-inline: 2.4rem;
+	--flow-spacer: var(--spacing-rem-400);
+	@include mxn.white-container;
+	@include mxn.modal(var(--max-width), var(--top));
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 0.5); // TODO: remove, now for better visibility
+
+	&[data-open] {
+		display: flex;
+	}
+
+	&__confirmation-button {
+		margin-top: var(--spacing-rem-500);
+	}
+
+	@include mxn.mq(medium) {
+		--flow-spacer: var(--spacing-rem-300);
+
+		&__heading {
+			margin-top: var(--spacing-rem-700);
+		}
+	}
+}

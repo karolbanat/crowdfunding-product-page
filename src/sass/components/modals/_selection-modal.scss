@@ -1,16 +1,17 @@
 @use '../../base/mixins' as mxn;
 
 .selection-modal {
+	--top: clamp(12rem, 5rem + 10vw, 18.5rem);
 	--max-width: 73rem;
 	--margin-inline: 2.4rem;
 	@include mxn.white-container;
-	position: absolute;
-	top: clamp(12rem, 5rem + 10vw, 18.5rem);
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 9999;
-	width: min(var(--max-width), 100% - 2 * var(--margin-inline));
+	@include mxn.modal(var(--max-width), var(--top));
+	display: none;
 	box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 0.5); // TODO: remove, now for better visibility
+
+	&[data-open] {
+		display: block;
+	}
 
 	&__close-button {
 		--size: 4rem;

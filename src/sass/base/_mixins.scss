@@ -29,3 +29,13 @@
 	align-items: center;
 	justify-content: space-between;
 }
+
+@mixin modal($max-width: 73rem, $top: 14rem) {
+	--margin-inline: 2.4rem;
+	position: absolute;
+	top: $top;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 9999;
+	width: min($max-width, 100% - 2 * var(--margin-inline));
+}
