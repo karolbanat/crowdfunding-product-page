@@ -171,34 +171,38 @@
     </p>
 
     <!-- pledges list -->
-    <ul role="radiogroup" class="pledge-list">
+    <ul class="pledge-list">
       <!-- no reward pledge card -->
       <li>
         <article class="modal-pledge-card">
           <h3 class="visually-hidden">Pledge with no reward</h3>
           <div class="modal-pledge-card__body">
-            <div class="custom-radio-button">
-              <input type="radio"
-                     name="reward"
-                     id="no-reward-selection">
-              <span class="custom-radio-button__button"></span>
-              <label for="no-reward-selection" class="custom-radio-button__label">
-                <span class="modal-pledge-card__heading">Pledge with no reward</span>
+            <div class="modal-pledge-card__header">
+              <label for="no-reward-selection" class="custom-radio-button">
+                <input type="radio"
+                       name="reward"
+                       id="no-reward-selection">
+                <span class="custom-radio-button__button"></span>
+                <span class="custom-radio-button__label">
+                  <span class="modal-pledge-card__heading">Pledge with no reward</span>
+                </span>
               </label>
             </div>
             <p class="modal-pledge-card__desc">Choose to support us without a reward if you simply believe in our
               project. As a backer, you will be signed up to receive product updates via email.</p>
           </div>
-          <form class="modal-pledge-form">
-            <label for="no-reward-pledge">Enter your pledge</label>
-            <input data-reward="no-reward"
-                   type="number"
-                   min="1"
-                   step="1"
-                   placeholder="0"
-                   id="no-reward-pledge">
-            <button type="submit" class="button button--primary">Continue</button>
-          </form>
+          <div class="modal-pledge-card__footer">
+            <form class="modal-pledge-form">
+              <label for="no-reward-pledge">Enter your pledge</label>
+              <input data-reward="no-reward"
+                     type="number"
+                     min="1"
+                     step="1"
+                     placeholder="0"
+                     id="no-reward-pledge">
+              <button type="submit" class="button button--primary">Continue</button>
+            </form>
+          </div>
         </article>
       </li>
       <!-- bamboo stand reward pledge card -->
@@ -206,31 +210,35 @@
         <article class="modal-pledge-card">
           <h3 class="visually-hidden">Bamboo Stand</h3>
           <div class="modal-pledge-card__body">
-            <div class="custom-radio-button">
-              <input type="radio"
-                     name="reward"
-                     id="bamboo-stand-selection">
-              <span class="custom-radio-button__button"></span>
-              <label for="bamboo-stand-selection" class="custom-radio-button__label">
-                <span class="modal-pledge-card__heading">Bamboo Stand</span>
-                <span class="modal-pledge-card__contribution-info">Pledge $25 or more</span>
+            <div class="modal-pledge-card__header">
+              <label for="bamboo-stand-selection" class="custom-radio-button">
+                <input type="radio"
+                       name="reward"
+                       id="bamboo-stand-selection">
+                <span class="custom-radio-button__button"></span>
+                <span class="custom-radio-button__label">
+                  <span class="modal-pledge-card__heading">Bamboo Stand</span>
+                  <span class="modal-pledge-card__contribution-info">Pledge $25 or more</span>
+                </span>
               </label>
             </div>
             <p class="modal-pledge-card__desc">You get an ergonomic stand made of natural bamboo. You've helped us
               launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
             <p class="modal-pledge-card__stock-info"><span>101</span> left</p>
           </div>
-          <form class="modal-pledge-form">
-            <label for="bamboo-stand-pledge">Enter your pledge</label>
-            <input data-reward="bamboo-stand"
-                   type="number"
-                   min="25"
-                   step="1"
-                   placeholder="25"
-                   value="25"
-                   id="bamboo-stand-pledge">
-            <button type="submit" class="button button--primary">Continue</button>
-          </form>
+          <div class="modal-pledge-card__footer">
+            <form class="modal-pledge-form">
+              <label for="bamboo-stand-pledge">Enter your pledge</label>
+              <input data-reward="bamboo-stand"
+                     type="number"
+                     min="25"
+                     step="1"
+                     placeholder="25"
+                     value="25"
+                     id="bamboo-stand-pledge">
+              <button type="submit" class="button button--primary">Continue</button>
+            </form>
+          </div>
         </article>
       </li>
       <!-- black edition stand pledge card -->
@@ -238,63 +246,72 @@
         <article class="modal-pledge-card">
           <h3 class="visually-hidden">Black Edition Stand</h3>
           <div class="modal-pledge-card__body">
-            <div class="custom-radio-button">
-              <input type="radio"
-                     name="reward"
-                     id="black-edition-selection">
-              <span class="custom-radio-button__button"></span>
-              <label for="black-edition-selection" class="custom-radio-button__label">
-                <span class="modal-pledge-card__heading">Black Edition Stand</span>
-                <span class="modal-pledge-card__contribution-info">Pledge $75 or more</span>
+            <div class="modal-pledge-card__header">
+              <label for="black-edition-selection" class="custom-radio-button">
+                <input type="radio"
+                       name="reward"
+                       id="black-edition-selection">
+                <span class="custom-radio-button__button"></span>
+                <span class="custom-radio-button__label">
+                  <span class="modal-pledge-card__heading">Black Edition Stand</span>
+                  <span class="modal-pledge-card__contribution-info">Pledge $75 or more</span>
+                </span>
               </label>
             </div>
             <p class="modal-pledge-card__desc">You get a Black Special Edition computer stand and a personal thank you.
               You’ll be added to our Backer member list. Shipping is included.</p>
             <p class="modal-pledge-card__stock-info"><span>64</span> left</p>
           </div>
-          <form class="modal-pledge-form">
-            <label for="black-edition-pledge">Enter your pledge</label>
-            <input data-reward="black-edition"
-                   type="number"
-                   min="75"
-                   step="1"
-                   placeholder="75"
-                   value="75"
-                   id="black-edition-pledge">
-            <button type="submit" class="button button--primary">Continue</button>
-          </form>
+          <div class="modal-pledge-card__footer">
+            <form class="modal-pledge-form">
+              <label for="black-edition-pledge">Enter your pledge</label>
+              <input data-reward="black-edition"
+                     type="number"
+                     min="75"
+                     step="1"
+                     placeholder="75"
+                     value="75"
+                     id="black-edition-pledge">
+              <button type="submit" class="button button--primary">Continue</button>
+            </form>
+          </div>
         </article>
       </li>
       <!-- mohagany special edition stand pledge card -->
       <li>
         <article class="modal-pledge-card" data-out-of-stock="true">
           <div class="modal-pledge-card__body">
-            <div class="custom-radio-button">
-              <input type="radio"
-                     name="reward"
-                     disabled
-                     id="mohagany-special-selection">
-              <span class="custom-radio-button__button"></span>
-              <label for="mohagany-special-selection" class="custom-radio-button__label">
-                <span class="modal-pledge-card__heading">Mahogany Special Edition</span>
-                <span class="modal-pledge-card__contribution-info">Pledge $200 or more</span>
+            <div class="modal-pledge-card__header">
+              <label for="mohagany-special-selection" class="custom-radio-button">
+                <input type="radio"
+                       name="reward"
+                       disabled
+                       id="mohagany-special-selection">
+                <span class="custom-radio-button__button"></span>
+                <span class="custom-radio-button__label">
+                  <span class="modal-pledge-card__heading">Mahogany Special Edition</span>
+                  <span class="modal-pledge-card__contribution-info">Pledge $200 or more</span>
+                </span>
               </label>
             </div>
             <p class="modal-pledge-card__desc">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
               personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
             <p class="modal-pledge-card__stock-info"><span>0</span> left</p>
           </div>
-          <form class="modal-pledge-form">
-            <label for="mohagany-special-pledge">Enter your pledge</label>
-            <input data-reward="mohagany-special"
-                   type="number"
-                   min="200"
-                   step="1"
-                   placeholder="200"
-                   value="200"
-                   id="mohagany-special-pledge">
-            <button type="submit" class="button button--primary">Continue</button>
-          </form>
+          <div class="modal-pledge-card__footer">
+            <form class="modal-pledge-form">
+              <label for="mohagany-special-pledge">Enter your pledge</label>
+              <input data-reward="mohagany-special"
+                     type="number"
+                     min="200"
+                     step="1"
+                     placeholder="200"
+                     value="200"
+                     id="mohagany-special-pledge"
+                     disabled>
+              <button type="submit" class="button button--primary" disabled>Continue</button>
+            </form>
+          </div>
         </article>
       </li>
     </ul> <!-- pledges list end -->

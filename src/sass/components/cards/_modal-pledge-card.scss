@@ -3,16 +3,72 @@
 
 .modal-pledge-card {
 	@extend .pledge-card;
+	--internal-inline-padding: clamp(2.4rem, 1rem + 3vw, 2.8rem);
+	--internal-block-padding: var(--spacing-rem-400);
+	padding: 0;
+	gap: 0;
+
+	&__body {
+		--gap: 2.4rem;
+		display: grid;
+		grid-template-areas:
+			'header'
+			'desc'
+			'stock';
+		gap: var(--gap);
+		padding-inline: var(--internal-inline-padding);
+		padding-block: var(--internal-block-padding);
+		@include mxn.mq(medium) {
+			--gap: 1.6rem;
+			grid-template-areas:
+				'header stock'
+				'desc desc';
+		}
+	}
+
+	&__header {
+		grid-area: header;
+	}
 
 	&__heading {
+		@extend .pledge-card__heading;
 		font-size: var(--fz-400);
-		font-weight: var(--fw-700);
-		color: var(--clr-neutral-900);
 	}
 
 	&__contribution-info {
 		font-size: var(--fz-400);
 		font-weight: var(--fw-500);
 		color: var(--clr-primary-400);
+	}
+
+	&__desc {
+		grid-area: desc;
+		@include mxn.mq(medium) {
+			margin-left: var(--spacing-rem-700);
+		}
+	}
+
+	&__stock-info {
+		@extend .pledge-card__stock-info;
+		grid-area: stock;
+		font-size: var(--fz-stock-text);
+		@include mxn.mq(medium) {
+			margin-left: auto;
+		}
+
+		& span {
+			font-size: var(--fz-modal-stock-number);
+		}
+	}
+
+	&__footer {
+		// display: none;
+		border-top: 1px solid hsl(0 0% 0% / 0.15);
+		padding-inline: var(--internal-inline-padding);
+		padding-block: var(--internal-block-padding);
+	}
+
+	&[data-selected] &__footer {
+		display: block;
 	}
 }
