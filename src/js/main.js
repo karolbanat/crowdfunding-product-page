@@ -66,6 +66,8 @@ const handlePledgeButton = (e) => {
 
 const openSelectionModal = () => {
 	selectionModal.setAttribute(DATA_STATES.open, true);
+	closeSelectionModalButton.focus();
+	document.body.classList.add('backdrop');
 };
 
 const selectChosenPledge = (reward) => {
@@ -82,6 +84,7 @@ const selectChosenPledge = (reward) => {
 
 const closeSelectionModal = () => {
 	selectionModal.removeAttribute(DATA_STATES.open);
+	document.body.classList.remove('backdrop');
 };
 
 const handlePledgeSelection = (e) => {
@@ -149,10 +152,13 @@ const formatAmount = (amount) => {
 /* success modal handling */
 const openSuccessModal = () => {
 	successModal.setAttribute(DATA_STATES.open, true);
+	successModalCloseButton.focus();
+	document.body.classList.add('backdrop');
 };
 
 const closeSuccessModal = () => {
 	successModal.removeAttribute(DATA_STATES.open);
+	document.body.classList.remove('backdrop');
 };
 
 /* event listeners */

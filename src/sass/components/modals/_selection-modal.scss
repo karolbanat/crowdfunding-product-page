@@ -7,7 +7,6 @@
 	@include mxn.white-container;
 	@include mxn.modal(var(--max-width), var(--top));
 	display: none;
-	box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 0.5); // TODO: remove, now for better visibility
 
 	&[data-open] {
 		display: block;
@@ -26,6 +25,10 @@
 		background: none;
 		border: none;
 		cursor: pointer;
+
+		&:focus {
+			outline: 1px solid var(--clr-primary-700);
+		}
 	}
 
 	&__desc {

@@ -15,7 +15,7 @@
 		--button-bg: var(--clr-primary-400);
 
 		&:hover,
-		&:focus-visible {
+		&:focus {
 			--button-bg: var(--clr-primary-700);
 		}
 	}

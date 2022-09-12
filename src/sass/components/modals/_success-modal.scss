@@ -12,7 +12,6 @@
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
-	box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 0.5); // TODO: remove, now for better visibility
 
 	&[data-open] {
 		display: flex;
