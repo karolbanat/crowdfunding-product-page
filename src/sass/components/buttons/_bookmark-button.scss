@@ -19,6 +19,10 @@
 		padding-right: var(--spacing-rem-400);
 	}
 
+	& [data-suffix] {
+		display: none;
+	}
+
 	& span[data-hidden='small'] {
 		display: none;
 		@include mxn.mq(medium) {
@@ -31,7 +35,7 @@
 		--icon-fill: var(--clr-neutral-600);
 	}
 
-	&.bookmarked {
+	&[data-bookmarked] {
 		$bg-color: func.get-color(primary, 700);
 		--clr-text: var(--clr-primary-700);
 		--icon-fill: var(--clr-primary-700);
@@ -40,6 +44,10 @@
 		&:hover,
 		&:focus-visible {
 			--icon-fill: var(--clr-primary-400);
+		}
+
+		& [data-suffix] {
+			display: inline-block;
 		}
 	}
 }

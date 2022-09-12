@@ -8,6 +8,14 @@
 	padding: 0;
 	gap: 0;
 
+	&[data-selected] {
+		outline: 2px solid var(--clr-primary-400);
+	}
+
+	&[data-selected] &__footer {
+		display: block;
+	}
+
 	&__body {
 		--gap: 2.4rem;
 		display: grid;
@@ -67,13 +75,5 @@
 		border-top: 1px solid hsl(0 0% 0% / 0.15);
 		padding-inline: var(--internal-inline-padding);
 		padding-block: var(--internal-block-padding);
-	}
-
-	&[data-selected] {
-		outline: 2px solid var(--clr-primary-400);
-	}
-
-	&[data-selected] &__footer {
-		display: block;
 	}
 }

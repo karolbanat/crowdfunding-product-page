@@ -54,7 +54,7 @@
                 <path fill="#E7E7E7" d="M23 19v18l5-5.058L33 37V19z" />
               </g>
             </svg>
-            <span data-hidden="small" id="bookmark-label">Bookmark</span></button>
+            <span data-hidden="small" id="bookmark-label">Bookmark<span data-suffix>ed</span> </span></button>
         </div>
       </div>
     </div>
@@ -179,7 +179,8 @@
           <div class="modal-pledge-card__body">
             <div class="modal-pledge-card__header">
               <label for="no-reward-selection" class="custom-radio-button">
-                <input type="radio"
+                <input data-reward="no-reward"
+                       type="radio"
                        name="reward"
                        id="no-reward-selection">
                 <span class="custom-radio-button__button"></span>
@@ -194,11 +195,11 @@
           <div class="modal-pledge-card__footer">
             <form class="pledge-form">
               <label class="pledge-form__label" for="no-reward-pledge">Enter your pledge</label>
-              <input data-reward="no-reward"
-                     type="number"
+              <input type="number"
                      min="1"
                      step="1"
                      placeholder="0"
+                     value="0"
                      id="no-reward-pledge">
               <button type="submit" class="button button--primary">Continue</button>
             </form>
@@ -212,7 +213,8 @@
           <div class="modal-pledge-card__body">
             <div class="modal-pledge-card__header">
               <label for="bamboo-stand-selection" class="custom-radio-button">
-                <input type="radio"
+                <input data-reward="bamboo-stand"
+                       type="radio"
                        name="reward"
                        id="bamboo-stand-selection">
                 <span class="custom-radio-button__button"></span>
@@ -229,8 +231,7 @@
           <div class="modal-pledge-card__footer">
             <form class="pledge-form">
               <label class="pledge-form__label" for="bamboo-stand-pledge">Enter your pledge</label>
-              <input data-reward="bamboo-stand"
-                     type="number"
+              <input type="number"
                      min="25"
                      step="1"
                      placeholder="25"
@@ -248,7 +249,8 @@
           <div class="modal-pledge-card__body">
             <div class="modal-pledge-card__header">
               <label for="black-edition-selection" class="custom-radio-button">
-                <input type="radio"
+                <input data-reward="black-edition"
+                       type="radio"
                        name="reward"
                        id="black-edition-selection">
                 <span class="custom-radio-button__button"></span>
@@ -265,8 +267,7 @@
           <div class="modal-pledge-card__footer">
             <form class="pledge-form">
               <label class="pledge-form__label" for="black-edition-pledge">Enter your pledge</label>
-              <input data-reward="black-edition"
-                     type="number"
+              <input type="number"
                      min="75"
                      step="1"
                      placeholder="75"
@@ -284,7 +285,8 @@
           <div class="modal-pledge-card__body">
             <div class="modal-pledge-card__header">
               <label for="mohagany-special-selection" class="custom-radio-button">
-                <input type="radio"
+                <input data-reward="mohagany-special"
+                       type="radio"
                        name="reward"
                        disabled
                        id="mohagany-special-selection">
@@ -302,8 +304,7 @@
           <div class="modal-pledge-card__footer">
             <form class="pledge-form">
               <label class="pledge-form__label" for="mohagany-special-pledge">Enter your pledge</label>
-              <input data-reward="mohagany-special"
-                     type="number"
+              <input type="number"
                      min="200"
                      step="1"
                      placeholder="200"
