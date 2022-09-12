@@ -1,3 +1,5 @@
+/* skip link */
+const skipLink = document.querySelector('#skip-link');
 /* nav elements */
 const toggleBtn = document.querySelector('.toggle-button');
 const primaryNav = document.querySelector('#primary-nav');
@@ -66,7 +68,6 @@ const handlePledgeButton = (e) => {
 
 const openSelectionModal = () => {
 	selectionModal.setAttribute(DATA_STATES.open, true);
-	closeSelectionModalButton.focus();
 	document.body.classList.add('backdrop');
 };
 
@@ -78,12 +79,14 @@ const selectChosenPledge = (reward) => {
 	if (selectedPledgeInput) {
 		unselectAllCards();
 		selectedPledgeInput.checked = true;
+		selectedPledgeInput.focus(); // give focus to selected input after opening modal
 		selectParentCard(selectedPledgeInput);
 	}
 };
 
 const closeSelectionModal = () => {
 	selectionModal.removeAttribute(DATA_STATES.open);
+	skipLink.focus();
 	document.body.classList.remove('backdrop');
 };
 
@@ -152,12 +155,13 @@ const formatAmount = (amount) => {
 /* success modal handling */
 const openSuccessModal = () => {
 	successModal.setAttribute(DATA_STATES.open, true);
-	successModalCloseButton.focus();
+	successModalCloseButton.focus(); // give focus to confirmation button
 	document.body.classList.add('backdrop');
 };
 
 const closeSuccessModal = () => {
 	successModal.removeAttribute(DATA_STATES.open);
+	skipLink.focus(); // give focus to skip link after closing success modal
 	document.body.classList.remove('backdrop');
 };
 
