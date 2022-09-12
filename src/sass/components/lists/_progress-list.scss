@@ -19,6 +19,7 @@
 		&:not(:first-of-type) {
 			position: relative;
 
+			/* line between progress data */
 			&::after {
 				$line-clr: func.get-color(neutral, 900);
 				--width: 8rem;

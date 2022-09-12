@@ -19,6 +19,7 @@
 		opacity: 0;
 	}
 
+	/* hover states */
 	& input[type='radio']:not(:disabled):is(:hover, :focus) + &__button {
 		--theme: var(--clr-primary-400);
 		cursor: pointer;

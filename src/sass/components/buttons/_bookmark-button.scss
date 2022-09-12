@@ -19,10 +19,12 @@
 		padding-right: var(--spacing-rem-400);
 	}
 
+	/* switchwing between -ed suffix */
 	& [data-suffix] {
 		display: none;
 	}
 
+	/* for bookmark text */
 	& span[data-hidden='small'] {
 		display: none;
 		@include mxn.mq(medium) {

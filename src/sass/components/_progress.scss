@@ -30,6 +30,7 @@
 		background-color: fade-out($bg-color, 0.95);
 		overflow: hidden;
 
+		/* green fill */
 		&::before {
 			content: '';
 			position: absolute;
