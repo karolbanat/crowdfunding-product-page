@@ -1,7 +1,7 @@
 @use '../../base/mixins' as mxn;
 
 .success-modal {
-	--top: 15rem;
+	--top: 50vh;
 	--max-width: 54rem;
 	--margin-inline: 2.4rem;
 	--flow-spacer: var(--spacing-rem-400);
@@ -12,6 +12,7 @@
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
+	transform: translate(-50%, -50%);
 
 	&[data-open] {
 		display: flex;
